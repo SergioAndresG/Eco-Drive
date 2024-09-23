@@ -4,7 +4,7 @@
     <nav>
       <ul>
         <li><a href="#">HOME</a></li>
-        <li class="logo">Eco-Drive</li>
+        <img src="c:\Users\Device2\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip\{2F9E02F2-9324-411F-BF53-3BDFA6780E11}.png" class="logo">
         <li><a href="#">LOGIN</a></li>
       </ul>
     </nav>
@@ -38,7 +38,6 @@
       <div class="slide">
         <img src="https://img.freepik.com/vector-premium/tierra-verde-iconos-energia-renovable_657438-41594.jpg?uid=R150765989&ga=GA1.1.1982243995.1726942219&semt=ais_hybrid" alt="Imagen 4">
       </div>
-
       <!-- Navegación automática -->
       <div class="navigation-auto">
         <div class="auto-btn1"></div>
@@ -47,7 +46,6 @@
         <div class="auto-btn4"></div>
       </div>
     </div>
-
     <!-- Controles manuales -->
     <div class="navigation-manual">
       <label for="img-1" class="manual-btn"></label>
@@ -56,14 +54,18 @@
       <label for="img-4" class="manual-btn"></label>
     </div>
   </div>
-
   <h1 id="sobre">Sobre Nosotros</h1>
   <div class="card-container">
+    <!-- From Uiverse.io by dylanharriscameron -->
     <div class="card">
-      <p>
-        Ecodrive es una plataforma dedicada a promover la movilidad sostenible a través de soluciones innovadoras y ecológicas para los conductores.
-      </p>
-    </div>
+  <div class="bg"></div>
+  <div class="blob"></div>
+  <div class="content">
+    <p>
+      Ecodrive es una plataforma dedicada a promover la movilidad sostenible a través de soluciones innovadoras y ecológicas para los conductores.
+    </p>
+  </div>
+</div>
     <div class="card">
       <p>
         Comprometidos con el medio ambiente, en Ecodrive trabajamos para facilitar el acceso a tecnologías limpias y fomentar el uso responsable de los recursos energéticos en la conducción.
@@ -75,16 +77,22 @@
       </p>
     </div>
   </div>
-
   
   <section id="text1">
     <h2 id="Estamos">Estamos Comprometidos</h2>
     <hr id="li2">
-    <div>
+    <div id="en">
       <p>En Ecodrive, creemos que cada pequeño cambio cuenta, por eso ofrecemos herramientas y servicios diseñados para que los conductores reduzcan su impacto ambiental de forma práctica y eficiente.</p>
     </div>
   </section>
+
+  <section id="text3">
+    <p id="t">¡Únete al movimiento hacia una conducción más sostenible con Ecodrive! 🚗🌿 Descubre cómo puedes reducir tu impacto ambiental mientras conduces con nuestras herramientas ecológicas y prácticas soluciones. Ya sea optimizando el consumo de combustible o eligiendo rutas más verdes, en Ecodrive hacemos que cada viaje cuente para el planeta. 🌍💚 ¡Visita nuestras Redes!</p>
+  </section>
+
+  <div class="imgF"><img src="https://img.freepik.com/vector-premium/ilustracion-circular-crecimiento-verde-iconos-empresariales-ambientales_657438-37631.jpg?uid=R150765989&ga=GA1.1.1982243995.1726942219&semt=ais_hybrid" alt="Imagen" id="imgf"></div>
 </template>
+
 
 <style scoped>
 /* Navbar */
@@ -111,6 +119,12 @@ nav ul li a {
 nav ul li.logo {
   font-size: 1.5rem;
   color: #01832D;
+}
+
+.logo{
+  width: 200px;
+  margin-left: -40px;
+  padding: 12px;
 }
 
 hr {
@@ -254,20 +268,6 @@ hr {
   padding: 20px;
 }
 
-.card {
-  background-color: #f2f2f2;
-  padding: 15px;
-  border-radius: 10px;
-  width: 30%;
-  height: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card p {
-  font-size: 16px;
-  text-align: center;
-}
-
 /* Estilos de la segunda sección */
 #Estamos {
   color: #01832D;
@@ -290,5 +290,104 @@ hr {
   font-size: 18px;
   color: #666;
 }
+
+#en {
+  background-color: #01832c57;
+  border-radius: 15px;
+  margin-top: 12px;
+  padding: 12px;
+  color: #000000;
+}
+
+/*text3 */
+
+#text3{
+  margin-top: 100px;
+  width: 500px;
+  margin-left: 124px;
+}
+
+#imgf{
+  margin-left: -520px;
+  width: 400px;
+  height: 400px;
+  margin-top: 23px;
+}
+
+/* From Uiverse.io by dylanharriscameron */ 
+.card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 14px;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+  height: 240px;
+  z-index: 2; /* Coloca el fondo detrás del contenido */
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1; /* Asegúrate de que esté debajo del contenido */
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #01832c95;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+.blob p {
+  position: relative;
+  z-index: 5; /* Asegura que el texto esté sobre todo */
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
 
 </style>
