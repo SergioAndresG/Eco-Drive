@@ -4,8 +4,8 @@
     <nav>
       <ul>
         <li><a href="#">Nosotros</a></li>
-        <img src="c:\Users\Device2\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip\{2F9E02F2-9324-411F-BF53-3BDFA6780E11}.png" class="logo">
-        <li><a href="#">LOGIN</a></li>
+        
+        <li><router-link to="/Login">Iniciar Sesión</router-link></li>
       </ul>
     </nav>
     <hr>
@@ -64,7 +64,6 @@
 </section>
 
 <img src="https://img.freepik.com/fotos-premium/imagen-hay-huevo-azul-dibujos-animados-rodeado-vegetacion-follaje_1132399-5647.jpg?uid=R150765989&ga=GA1.1.1982243995.1726942219&semt=ais_hybrid" id="imgE">
-
 <footer>
   <div>
     <p>&copy; 2024 Mi Sitio Web</p>
@@ -81,8 +80,11 @@
 
 body {
     font-family: "Magra", sans-serif;
-    margin: 0; /* Elimina el margen predeterminado del body */
-    padding: 0; /* Elimina el padding predeterminado del body */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh; /* Asegura que el div ocupe toda la altura de la ventana */
 }
 
 header {
