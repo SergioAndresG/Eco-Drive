@@ -11,7 +11,7 @@
     </nav>
     <hr>
    </header>
-   <div>
+   <div id="contend">
     <h2>Buscar Ubicación</h2>
     <input v-model="address" placeholder="Introduce una dirección" />
     <button @click="searchLocation">Buscar</button>
@@ -53,6 +53,11 @@ export default {
 </script>
 
 <style>
+#contend{
+    margin-top: 200px;
+    margin-left: -800px
+}
+
 header {
   text-align: center;
   margin-left: -1px;

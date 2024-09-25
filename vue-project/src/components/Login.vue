@@ -5,8 +5,7 @@
         <img src="https://res.cloudinary.com/dqwx4l5cy/image/upload/v1727245380/Captura_de_pantalla_2024-09-25_011635_paeml8.png" class="logo">
         <li><router-link to="/">Home</router-link></li>
         <li id="eco"><a href="#">Eco-Drive</a></li>
-        <li><router-link to="/Login">Iniciar Sesion</router-link></li>
-        <li><router-link to="/Registrer">Registrate</router-link></li>
+        <li><router-link to="/Register">Registrate</router-link></li>
         <li><a href="#">Nosotros</a></li>
       </ul>
     </nav>
