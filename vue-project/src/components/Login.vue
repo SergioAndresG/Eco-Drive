@@ -19,20 +19,22 @@
       <p>¿Es tu primera vez?</p>
       <button class="register-btn">Regístrate</button>
     </div>
-    <form class="register-form">
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" class="form-input" />
-      </div>
-      <div class="form-group">
-        <label for="role">Rol:</label>
-        <input type="text" id="role" class="form-input" />
-      </div>
-      <div class="form-group">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" class="form-input" />
-      </div>
-    </form>
+    <form @submit.prevent="iniciarSesion" class="register-form">
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input v-model="email" type="email" id="email" class="form-input" />
+  </div>
+  <div class="form-group">
+    <label for="role">Rol:</label>
+    <input v-model="role" type="text" id="role" class="form-input" />
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña:</label>
+    <input v-model="password" type="password" id="password" class="form-input" />
+  </div>
+  <button type="submit" class="btm">Iniciar Sesión</button> 
+</form>
+
   </div>
 
   <div class="imgL-container">
@@ -52,6 +54,32 @@
   </div>
 
 </template>
+<script>
+import router from '@/routers/misrutas';
+
+export default {
+  data() {
+    return {
+      correo: '',
+      role: '',
+      password: '',
+      mensajeError: ''
+    };
+  },
+  methods: {
+    iniciarSesion() {
+      if (this.role !== 'pasajero' && this.role !== 'conductor') {
+        this.mensajeError = 'Rol inválido, debe ser pasajero o conductor';
+      } else if (this.password !== '1234') {
+        this.mensajeError = 'Contraseña incorrecta';
+      } else {
+        // Aquí podrías agregar lógica para procesar el inicio de sesión
+        router.push('/ViewP')
+      }
+    }
+  }
+};
+</script>
 
 <style scoped>
 body {
@@ -66,7 +94,16 @@ body {
 #eco{
     font-size: 44px;
 }
-
+.btm{
+  background-color: #b2f2bb;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 230px;
+  margin-top: 23px
+}
 header {
   text-align: center;
   margin-left: -1px;

@@ -3,6 +3,8 @@ import Login from "@/components/Login.vue";
 import Map from "@/components/Map.vue";
 import Nosotros from "@/components/Nosotros.vue";
 import Register from "@/components/Register.vue";
+import ViewC from "@/components/viewC.vue";
+import ViewP from "@/components/viewP.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -30,6 +32,16 @@ const routes = [
     path: "/register",
     name: "Register",
     component: Register
+  },
+  {
+    path: "/viewP",
+    name: "ViewP",
+    component: ViewP
+  },
+  {
+    path: "/viewC",
+    name: "ViewC",
+    component: ViewC
   }
 ];
 
